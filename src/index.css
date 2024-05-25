@@ -1,0 +1,186 @@
+:root {
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+}
+
+a {
+  font-weight: bold;
+  color: #000;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 2.5rem;
+  line-height: 1.1;
+}
+
+h2 {
+  font-weight: 900;
+  font-size: 1.5rem;
+  line-height: 1.1;
+}
+
+p {
+  color: #424242;
+}
+
+input {
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 1rem 1.5rem 1rem 2.5rem;
+  border: 1px solid #757575;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #24243e;
+  color: #fff;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.auth_page {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 350px auto;
+  background: #f9f9fa;
+}
+.auth_page input {
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 18px;
+}
+.auth_page .password-field {
+  position: relative;
+}
+.auth_page .password-field span {
+  position: absolute;
+  font-size: 0.6rem;
+  font-weight: 400;
+  top: 40%;
+  right: 5%;
+  cursor: pointer;
+}
+.auth_page-side--left {
+  text-align: center;
+  color: #fff;
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+  background: rgb(85, 85, 147);
+  background: linear-gradient(
+    180deg,
+    rgba(85, 85, 147, 1) 0%,
+    rgba(16, 15, 42, 1) 100%
+  );
+}
+.auth_page-side--left article {
+  margin: -4rem 1rem 5rem;
+}
+.auth_page-side--left img.company-logo {
+  width: 100px;
+  margin: auto;
+}
+.auth_page-side--left img.handshake {
+  margin: -12rem 0 -3rem 0;
+}
+.auth_page-side--left p {
+  color: #bdbdbd;
+  margin-top: 0.5rem;
+}
+
+.auth_page-side--right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 2rem 1rem;
+  text-align: center;
+}
+.auth_page-side--right .text-icon {
+  display: flex;
+  align-items: center;
+}
+.auth_page-side--right h2 {
+  margin: 1rem 0;
+}
+.auth_page-side--right nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+}
+.auth_page-side--right nav .copyright {
+  color: #9e9e9e;
+}
+.auth_page-side--right form {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto 5rem;
+  justify-content: space-evenly;
+}
+.auth_page-side--right article {
+  margin-bottom: 1.5rem;
+}
+.auth_page-side--right #user-icon {
+  background-image: url("/user-icon.svg");
+}
+.auth_page-side--right #email-icon {
+  background-image: url("/email-icon.svg");
+}
+.auth_page-side--right #password-icon {
+  background-image: url("/password-icon.svg");
+}
+.auth_page-side--right button {
+  display: flex;
+  padding: 1rem 1.5rem;
+  justify-content: space-between;
+}
+.auth_page-side--right button svg {
+  transition: all 0.5s ease-in-out;
+}
+.auth_page-side--right button:hover svg {
+  margin-right: -0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .auth_page {
+    grid-template-columns: 1fr;
+  }
+  .auth_page-side--left {
+    display: none;
+  }
+}
