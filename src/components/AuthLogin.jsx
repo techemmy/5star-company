@@ -1,6 +1,6 @@
 import AuthInput from "./AuthInput";
+import { useNavigate, Link } from "react-router-dom";
 import Button from "./Button";
-import { Link, useNavigate } from "react-router-dom";
 
 export default function SignUp() {
   const navigate = useNavigate();
@@ -16,20 +16,20 @@ export default function SignUp() {
           <p>Return Home</p>
         </div>
         <div className="login">
-          <p>Already a member? <Link to="/login">LOG IN NOW</Link></p>
+          <p>Not a member yet? <Link to="/signup">JOIN NOW</Link></p>
         </div>
       </nav>
 
       <form>
         <article>
-          <h2>BECOME AN EXCLUSIVE MEMBERS</h2>
-          <p>SIGN UP and join the partnership </p>
+          <h2>WELCOME BACK EXCLUSIVE MEMBER</h2>
+          <p>LOG IN TO CONTINUE</p>
         </article>
 
-        <AuthInput icon="user" type="text" placeholder="Johnson Doe" />
         <AuthInput icon="email" type="email" placeholder="example@email.com" />
         <AuthInput icon="password" type="password" placeholder="Password" />
         <Button />
+        <Link to="#" className="reset-password"><p>Having issues with your password?</p></Link>
       </form>
 
       <nav>

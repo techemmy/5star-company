@@ -1,5 +1,6 @@
 import AuthSignUp from "./AuthSignup";
 import React from "react";
+import { Outlet } from "react-router-dom";
 
 export default function Auth() {
   React.useEffect(() => {
@@ -31,7 +32,8 @@ export default function Auth() {
         </article>
       </section>
 
-      <AuthSignUp />
+      <Outlet />
+
     </main>
 
   )

@@ -37,6 +37,7 @@ h2 {
 
 p {
   color: #424242;
+  font-weight: 400;
 }
 
 input {
@@ -132,6 +133,7 @@ button:focus-visible {
 .auth_page-side--right .text-icon {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .auth_page-side--right h2 {
   margin: 1rem 0;
@@ -174,6 +176,14 @@ button:focus-visible {
 }
 .auth_page-side--right button:hover svg {
   margin-right: -0.5rem;
+}
+.auth_page-side--right .reset-password {
+  text-decoration: none;
+  margin-top: 2rem;
+  font-size: 0.8rem;
+}
+.auth_page-side--right .reset-password:hover {
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 768px) {
