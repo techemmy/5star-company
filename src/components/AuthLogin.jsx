@@ -28,7 +28,7 @@ export default function SignUp() {
 
         <AuthInput icon="email" type="email" placeholder="example@email.com" />
         <AuthInput icon="password" type="password" placeholder="Password" />
-        <Button />
+        <Button text="Proceed to my Account" />
         <Link to="#" className="reset-password"><p>Having issues with your password?</p></Link>
       </form>
 

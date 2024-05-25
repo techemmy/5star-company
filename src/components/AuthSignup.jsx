@@ -29,7 +29,7 @@ export default function SignUp() {
         <AuthInput icon="user" type="text" placeholder="Johnson Doe" />
         <AuthInput icon="email" type="email" placeholder="example@email.com" />
         <AuthInput icon="password" type="password" placeholder="Password" />
-        <Button />
+        <Button text="Become a Member" />
       </form>
 
       <nav>
