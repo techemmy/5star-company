@@ -1,9 +1,10 @@
 import AuthInput from "./AuthInput";
-import { useNavigate, Link } from "react-router-dom";
 import Button from "./Button";
+import { Link, useNavigate } from "react-router-dom";
 
-export default function AuthLogin() {
+export default function SignUp() {
   const navigate = useNavigate();
+
   return (
     <section className="auth_page-side--right">
 
@@ -22,12 +23,11 @@ export default function AuthLogin() {
 
       <form>
         <article>
-          <h2>WELCOME BACK EXCLUSIVE MEMBER</h2>
-          <p>LOG IN TO CONTINUE</p>
+          <h2>FORGET PASSWORD</h2>
+          <p>ENTER YOUR EMAIL FOR RESET PASSWORD</p>
         </article>
 
         <AuthInput icon="email" type="email" placeholder="example@email.com" />
-        <AuthInput icon="password" type="password" placeholder="********" />
         <Button text="Proceed to my Account" />
         <Link to="/forgot-password" className="forgot-password"><p>Having issues with your password?</p></Link>
       </form>

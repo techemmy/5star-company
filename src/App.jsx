@@ -1,6 +1,7 @@
 import Auth from "./components/Auth";
 import AuthSignup from "./components/AuthSignup"
 import AuthLogin from "./components/AuthLogin"
+import AuthForgotPassword from "./components/AuthForgotPassword"
 import ErrorPage from "./components/ErrorPage";
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
 
@@ -13,6 +14,8 @@ const router = createBrowserRouter(
         <Route path="/login" element={<AuthLogin />}>
         </Route>
         <Route path="/signup" element={<AuthSignup />}>
+        </Route>
+        <Route path="/forgot-password" element={<AuthForgotPassword />}>
         </Route>
       </Route>
     </Route>
