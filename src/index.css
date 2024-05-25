@@ -186,6 +186,11 @@ button:focus-visible {
   text-decoration: underline;
 }
 
+#error-page {
+  text-align: center;
+  margin: 2rem auto;
+}
+
 @media screen and (max-width: 768px) {
   .auth_page {
     grid-template-columns: 1fr;

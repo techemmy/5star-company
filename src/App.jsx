@@ -6,7 +6,7 @@ import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } 
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Auth />}>
+    <Route path="/" errorElement={<ErrorPage />} element={<Auth />}>
       <Route errorElement={<ErrorPage />}>
         <Route index element={<AuthSignup />}>
         </Route>
