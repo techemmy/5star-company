@@ -1,9 +1,27 @@
 import AuthInput from "./AuthInput";
+import React from "react";
 import { useNavigate, Link } from "react-router-dom";
 import Button from "./Button";
 
-export default function SignUp() {
+export default function AuthLogin() {
   const navigate = useNavigate();
+
+  React.useEffect(() => {
+    const showPasswordBtn = document.getElementById('show-password');
+    if (showPasswordBtn == null) return;
+
+    showPasswordBtn.addEventListener('click', (event) => {
+      const passwordField = event.target.previousElementSibling;
+      if (passwordField.type == "password") {
+        passwordField.type = "text";
+        event.target.innerText = 'HIDE';
+      } else {
+        passwordField.type = "password";
+        event.target.innerText = 'SHOW';
+      }
+    })
+  }, [])
+
   return (
     <section className="auth_page-side--right">
 
@@ -27,7 +45,7 @@ export default function SignUp() {
         </article>
 
         <AuthInput icon="email" type="email" placeholder="example@email.com" />
-        <AuthInput icon="password" type="password" placeholder="Password" />
+        <AuthInput icon="password" type="password" placeholder="********" />
         <Button text="Proceed to my Account" />
         <Link to="#" className="reset-password"><p>Having issues with your password?</p></Link>
       </form>

@@ -1,23 +1,6 @@
-import AuthSignUp from "./AuthSignup";
-import React from "react";
 import { Outlet } from "react-router-dom";
 
 export default function Auth() {
-  React.useEffect(() => {
-    const showPasswordBtn = document.getElementById('show-password');
-    if (showPasswordBtn == null) return;
-
-    showPasswordBtn.addEventListener('click', (event) => {
-      const passwordField = event.target.previousElementSibling;
-      if (passwordField.type == "password") {
-        passwordField.type = "text";
-        event.target.innerText = 'HIDE';
-      } else {
-        passwordField.type = "password";
-        event.target.innerText = 'SHOW';
-      }
-    })
-  }, [])
 
   return (
     <main className="auth_page">

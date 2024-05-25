@@ -1,9 +1,27 @@
 import AuthInput from "./AuthInput";
+import React from "react";
 import Button from "./Button";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function SignUp() {
   const navigate = useNavigate();
+
+  React.useEffect(() => {
+    const showPasswordBtn = document.getElementById('show-password');
+    if (showPasswordBtn == null) return;
+
+    showPasswordBtn.addEventListener('click', (event) => {
+      const passwordField = event.target.previousElementSibling;
+      if (passwordField.type == "password") {
+        passwordField.type = "text";
+        showPasswordBtn.innerHTML = 'HIDE';
+      } else {
+        passwordField.type = "password";
+        showPasswordBtn.innerHTML = 'SHOW';
+      }
+    })
+  }, [])
+
   return (
     <section className="auth_page-side--right">
 
@@ -28,7 +46,7 @@ export default function SignUp() {
 
         <AuthInput icon="user" type="text" placeholder="Johnson Doe" />
         <AuthInput icon="email" type="email" placeholder="example@email.com" />
-        <AuthInput icon="password" type="password" placeholder="Password" />
+        <AuthInput icon="password" type="password" placeholder="********" />
         <Button text="Become a Member" />
       </form>
 
